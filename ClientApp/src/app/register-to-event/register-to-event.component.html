@@ -1,0 +1,26 @@
+<div class="container my-5">
+    <h1 class="mb-3">Registreeri</h1>
+
+    <div class="row">
+        <div class="col-5">
+
+            <form #form="ngForm" (ngSubmit)="updateRelation()">
+
+                <div class="mb-3">
+                    <label for="event-id" class="form-label">Event ID</label>
+                    <input type="text" readonly class="form-control" id="event-id"
+                    name="event-id" [(ngModel)]="eventDetails.id">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="comment" class="form-label">Notes</label>
+                    <textarea type="text" class="form-control" id="comment" rows="6"></textarea>
+                </div>
+
+            
+                <button type="submit" class="btn btn-primary"> Registreeri</button>
+        
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+<div class="container my-5">
+    <h1 class="mb-3">Add New Event</h1>
+
+    <div class="row">
+        <div class="col-5">
+
+            <form #form="ngForm" (ngSubmit)="addEvent()">
+                <div class="mb-3">
+                    <label for="event-title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="event-title"
+                    name="title" [(ngModel)]="addEventRequest.title">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea type="textarea" class="form-control" id="description" 
+                    aria-describedby="info-seletus" rows="4"
+                    name="description" [(ngModel)]="addEventRequest.description"></textarea>
+                    <div id= "info-seletus" class="form-text">
+                        Describe the event and possible activites briefly.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <!-- Should be later on a way to upload a image and persist it in the backend -->
+                    <label for="imgUrl" class="form-label">Image link</label>
+                    <input type="text" class="form-control" id="imgUrl"
+                    name="imgUrl" [(ngModel)]="addEventRequest.imgUrl">
+                </div>
+                <div class="mb-3">
+                    <!-- Currently just a string. Needs to be date selector. -->
+                    <label for="date" class="form-label">Date</label>
+                    <input type="text" class="form-control" id="date"
+                    name="date" [(ngModel)]="addEventRequest.date">
+                </div>
+                <div class="mb-3">
+                    <label for="instructor" class="form-label">Instructor</label>
+                    <input type="text" class="form-control" id="instructor"
+                    name="instructor" [(ngModel)]="addEventRequest.instructor">
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label"> Location</label>
+                    <input type="text" class="form-control" id="location"
+                    name="location" [(ngModel)]="addEventRequest.location">
+                </div>
+                <div class="mb-3">
+                    <!-- Make it into checkbox where only one can be selected -->
+                    <label class="form-check-label" for="kohustuslik">Kohustuslik vs vabatahtlik</label>
+                    <input
+                        class="form-control"
+                        type="text"
+                        id="kohustuslik"
+                        value="type"
+                        name="kohustuslik"
+                        [(ngModel)] ="addEventRequest.type"
+                    />
+                    
+                
+                </div>
+                <div class="mb-3">
+                    <label for="cost" class="form-label">Cost</label>
+                    <input type="text" class="form-control" id="cost"
+                    name="cost" [(ngModel)]="addEventRequest.cost">
+                </div>
+                <div class="mb-3">
+                    <label for="event-value" class="form-label">Osalustasu</label>
+                    <input type="number" class="form-control" id="event-value"
+                    name="event-value" [(ngModel)]="addEventRequest.value">
+                </div>
+        
+                <button type="submit" class="btn btn-primary"> Add an event</button>
+        
+            </form>
+
+        </div>
+    </div>
+    
+</div>

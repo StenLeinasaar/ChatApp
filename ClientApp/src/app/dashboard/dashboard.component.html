@@ -1,0 +1,7 @@
+<h1>Hello Dashboard</h1>
+
+<ul *ngFor="let user of users">
+    <li>{{user.username}}</li>
+</ul>
+
+<button class="btn btn-danger" (click)="logout()">Sign out</button>
